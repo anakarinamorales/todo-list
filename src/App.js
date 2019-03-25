@@ -27,7 +27,7 @@ class App extends Component {
    * Changes the 'completed' attribute of TodoItem object to the opposite value.
    * True becomes false. False becomes true.
    */
-  markComplete = (id) => {
+  toggleComplete = (id) => {
     this.setState({ todos: this.state.todos.map(todo => {
       if(todo.id === id) {
         todo.completed = !todo.completed;
@@ -39,7 +39,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Todos todos={this.state.todos} markComplete={this.markComplete} />
+        <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} />
       </div>
     );
   }

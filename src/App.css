@@ -13,3 +13,13 @@ a {
   color: #333333;
   text-decoration: none;
 }
+
+.App {
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  display: block;
+  margin: auto;
+  max-width: 800px;
+  min-width: 320px;
+  width: 100%;
+}
