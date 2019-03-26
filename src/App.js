@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
 import './App.css';
-import Header from './components/layout/Header'
-import Todos from './components/Todos';
-import AddTodo from './components/AddTodo';
+import Header from './components/Header/Header';
+import Todos from './components/Todos/Todos';
+import AddTodo from './components/AddTodo/AddTodo';
 
 class App extends Component {
 	state = {
@@ -47,6 +47,9 @@ class App extends Component {
 		this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] })
 	}
 
+	/**
+	 * Add a new TodoItem
+	 */
 	addTodo = (title) => {
 		const newTodo = {
 			id: uuid.v4(),
