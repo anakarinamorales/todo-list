@@ -1,7 +1,37 @@
 header {
     background-color: #333333;
     color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
     text-align: center;
-    text-transform: uppercase;
     padding: 5%;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 300;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+}
+
+header span {
+    color: #61DAFB;
+    text-transform: initial;
+    text-decoration: underline;
+}
+
+i {
+    color: #61dafb;
+}
+
+@media screen and (max-width: 414px) {
+    h1 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 343px) {
+    h1 {
+        font-size: 20px;
+    }
 }

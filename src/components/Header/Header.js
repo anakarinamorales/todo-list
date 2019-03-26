@@ -4,7 +4,11 @@ import './Header.css';
 function Header() {
     return (
         <header>
-            <h1>ToDo List with <i className="fab fa-react"></i></h1>
+            <h1>
+                ToDo list with&nbsp;
+                <span>React.js</span>
+                &nbsp;<i className="fab fa-react"></i>
+            </h1>
         </header>
     )
 }

@@ -16,8 +16,11 @@ export class TodoItem extends Component {
     }
 
     getCompletedStyle = () => {
-        return {
-            textDecoration: this.props.todo.completed ? 'line-through' : 'none'
+        if(this.props.todo.completed) {
+            return {
+                color: '#797979',
+                textDecoration: 'line-through'
+            }
         }
     }
 
@@ -29,7 +32,7 @@ export class TodoItem extends Component {
             <input type="checkbox" onChange={this.props.toggleComplete.bind(this, id)} /> {' '}
             <label htmlFor={"checkbox" + id} className="styledCheckbox"></label>
             <span className="todoText" style={this.getCompletedStyle()}> {title} </span>
-            <button type="button" className="deleteBtn" onClick={this.props.deleteItem.bind(this, id)}> x </button>
+            <button type="button" className="deleteBtn" title="Delete item" onClick={this.props.deleteItem.bind(this, id)}> x </button>
         </article>
         )
     }

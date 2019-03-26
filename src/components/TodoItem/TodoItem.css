@@ -8,6 +8,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked + .styledCheckbox::before {
+    color: #797979;
     content: "\2713";
     left: 3px;
     position: absolute;
@@ -29,6 +30,7 @@ input[type="checkbox"]:checked + .styledCheckbox::before {
 }
 
 .todoText {
+    color: #333333;
     display: inline-block;
     vertical-align: middle;
 }
@@ -36,7 +38,7 @@ input[type="checkbox"]:checked + .styledCheckbox::before {
 .deleteBtn {
     background-color: transparent;
     border: none;
-    color: #FF0000;
+    color: #555555;
     cursor: pointer;
     float: right;
     font-size: 16px;
