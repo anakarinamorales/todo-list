@@ -8,7 +8,7 @@ class App extends Component {
       {
         id: 1,
         title: 'Take out the trash',
-        completed: true
+        completed: false
       },
       {
         id: 2,
@@ -36,10 +36,18 @@ class App extends Component {
     }) });
   }
 
+  /** Delete TodoItem 
+   * Copies everything thas is already there and returns any todoItem that where
+   * the id is not equal to the id thas is passed
+  */
+  deleteItem = (id) => {
+    this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] })
+  }
+
   render() {
     return (
       <div className="App">
-        <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} />
+        <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} deleteItem={this.deleteItem}/>
       </div>
     );
   }
