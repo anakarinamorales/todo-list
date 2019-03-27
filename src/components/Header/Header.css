@@ -17,11 +17,37 @@ h1 {
 header span {
     color: #61DAFB;
     text-transform: initial;
-    text-decoration: underline;
 }
 
 i {
     color: #61dafb;
+}
+
+.navigation {
+    border-top: 1px dashed #fff;
+    display: block;
+    margin: 1.5em auto 0px;
+    padding-top: 1.5em;
+    width: 60%;
+}
+
+.linkItem {
+    border-right: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 17px;
+    padding: 0px 1em;
+    text-decoration: none;
+}
+
+.linkItem:last-of-type {
+    margin: 0px;
+    border: none;
+}
+
+.linkItem:hover {
+    color: #61DAFB;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 414px) {

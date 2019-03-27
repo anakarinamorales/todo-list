@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import uuid from 'uuid';
 import './App.css';
+
+// Components
 import Header from './components/Header/Header';
 import Todos from './components/Todos/Todos';
 import AddTodo from './components/AddTodo/AddTodo';
+import About from './components/pages/About/About';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
 	state = {
@@ -61,11 +66,23 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="App">
-				<Header />
-				<AddTodo addTodo={this.addTodo} />
-				<Todos todos={this.state.todos} toggleComplete={this.toggleComplete} deleteItem={this.deleteItem}/>
-			</div>
+			<Router>
+				<div className="App">
+					<Header />
+
+					{/* Route to main page */}
+					<Route exact path="/" render={props => (
+						<main>
+							<AddTodo addTodo={this.addTodo} />
+							<Todos todos={this.state.todos} toggleComplete={this.toggleComplete} deleteItem={this.deleteItem}/>
+						</main>
+					)} />
+
+					<Route path="/about" component={About} />
+
+					<Footer />
+				</div>
+			</Router>
 		);
 	}
 }

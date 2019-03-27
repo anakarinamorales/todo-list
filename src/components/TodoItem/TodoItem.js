@@ -12,6 +12,9 @@ export class TodoItem extends Component {
             fontSize: '14px',
             padding: '1em',
             borderBottom: '1px #cccccc dotted',
+            margin: 'auto',
+            width: '80%',
+            minWidth: '280px'
         }
     }
 

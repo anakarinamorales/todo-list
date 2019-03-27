@@ -45,3 +45,7 @@ input[type="checkbox"]:checked + .styledCheckbox::before {
     text-align: center;
     vertical-align: middle;
 }
+
+.deleteBtn:hover {
+    color: #FF0000;
+}
