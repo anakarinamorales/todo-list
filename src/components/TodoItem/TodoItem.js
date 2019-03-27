@@ -44,7 +44,9 @@ export class TodoItem extends Component {
 //PROPTYPES
 // A validation for properties that a componet should have
 TodoItem.propTypes = {
-    todo: PropTypes.object.isRequired
+    todo: PropTypes.object.isRequired,
+    toggleComplete: PropTypes.func.isRequired,
+    deleteItem: PropTypes.func.isRequired
 }
 
 export default TodoItem;

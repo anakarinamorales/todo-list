@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import './AddTodo.css';
 
 export class AddTodo extends Component {
@@ -36,5 +38,11 @@ export class AddTodo extends Component {
         )
     }
 }
+
+//PropTypes
+// A validation for prop that a componet should have
+AddTodo.propTypes = {
+    addTodo: PropTypes.func.isRequired
+  }
 
 export default AddTodo;
