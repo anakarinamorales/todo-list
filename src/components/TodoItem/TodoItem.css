@@ -32,6 +32,7 @@ input[type="checkbox"]:checked + .styledCheckbox::before {
 .todoText {
     color: #333333;
     display: inline-block;
+    max-width: 85%;
     vertical-align: middle;
 }
 
